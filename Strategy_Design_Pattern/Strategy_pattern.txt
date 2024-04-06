@@ -1,0 +1,8 @@
+Strategy Pattern
+
+1.strategy Pattern also know as policy Pattern
+2.Strategy is a behavioral software design pattern
+3.Strategy pattern enables to select an algorithm at runtime
+4.The strategy pattern defines a family of algorithms
+5.encapsulates each algorithm and  
+6.makes the algorithms interchangeable within that family
