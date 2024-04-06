@@ -1,6 +1,6 @@
 <?php 
 
-class Notifier{
+abstract class Notifier{
     protected $notification;
     public function sendNotification(){
         $this->notification->send();

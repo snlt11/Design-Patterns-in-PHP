@@ -3,27 +3,18 @@ require_once('Notify.php');
 require_once('EmailNotify.php');
 require_once('PhoneNotify.php');
 require_once('SMSNotify.php');
+require_once('Notifier.php');
+require_once('EmailUser.php');
+require_once('PhoneUser.php');
 
 
 class User
 {
-    public function __construct($type)
+    public function __construct()
     {
-        $obj = null;
-        switch ($type) {
-            case 'Email':
-                $obj = new EmailNotify();
-                break;
-            case 'Phone':
-                $obj = new PhoneNotify();
-                break;
-            case 'SMS':
-                $obj = new SMSNotify();
-                break;
-            default:
-                echo "Unknown type";
-        }
-        $obj->send();
+        $bb = new EmailUser();
+        $bb->notificationType(new PhoneNotify() );
+        $bb->sendNotification(); 
     }
 }
-new User('Phone');
+new User();
